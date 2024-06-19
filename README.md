@@ -23,6 +23,7 @@ The Lifting Data Server offers an easy and efficient way to access data about li
 ## Technologies Used
 - **Backend**: Node.js, Express.js
 - **CSV Parsing**: csv-parser
+- **Deoployment**: Render 
 
 ## Installation
 Follow these steps to set up the project locally:
@@ -31,17 +32,15 @@ Follow these steps to set up the project locally:
 ```bash
 git clone https://github.com/sideffect263/backend-liftingData.git
 cd backend-liftingData
-
+```
 
 Install Dependencies
-
-npm install
-
-Run the Server
-
-npm start
 ```bash
-### Clone
+npm install
+Run the Server
+npm start
+
+```
 
 
 
