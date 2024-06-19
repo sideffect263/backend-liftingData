@@ -23,7 +23,7 @@ const readCSV = async (filePath) => {
 // Serve CSV data
 app.get('/data/:year', async (req, res) => {
     const year = req.params.year;
-    const filePath = path.join(__dirname, `./data/oiics_${year}.csv`);
+    const filePath = path.join(`./data/oiics_${year}.csv`);
     
     try {
         console.log(`Trying to open - ${filePath}`);
@@ -41,6 +41,10 @@ app.get('/data/:year', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
