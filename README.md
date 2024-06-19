@@ -1,4 +1,4 @@
-🏗️ Lifting Data Server
+#🏗️ Lifting Data Server
 Welcome to the Lifting Data Server! This server application provides an API to serve CSV data related to lifting equipment and safety. It fetches data based on the specified year and delivers it in a structured format.
 
 Table of Contents
