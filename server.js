@@ -40,6 +40,6 @@ app.get('/data/:year', async (req, res) => {
     }
 });
 
-app.listen( () => {
+app.listen(3000, () => {
     console.log(`Server running on port`);
 });
