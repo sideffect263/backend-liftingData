@@ -45,7 +45,7 @@ npm start
 
 
 ## Usage
-- 🌐 The server will be running on `[https://liftingdataserver.onrender.com/](https://liftingdata-api.onrender.com/)`.
+- 🌐 The server will be running on [https://liftingdataserver.onrender.com/](https://liftingdata-api.onrender.com/).
 - 📄 Use the provided API endpoints to fetch data.
 
 ## API Endpoints
