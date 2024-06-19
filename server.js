@@ -23,11 +23,12 @@ const readCSV = async (filePath) => {
 // Serve CSV data
 app.get('/data/:year', async (req, res) => {
     const year = req.params.year;
-    const filePath = path.join(`./data/oiics_${year}.csv`);
+    const filePath = path.join(__dirname, `./data/oiics_${year}.csv`);
     
     try {
         console.log(`Trying to open - ${filePath}`);
         if (!fs.existsSync(filePath)) {
+            console.error(`File not found: ${filePath}`);
             return res.status(404).json({ error: "Data not found" });
         }
         
@@ -43,6 +44,7 @@ app.get('/data/:year', async (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
+    console.log('Hello World endpoint hit');
     res.send('Hello World!');
 });
 
