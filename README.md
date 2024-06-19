@@ -1,35 +1,48 @@
-Lifting Data Server
-Description
-The Lifting Data Server is an Express.js application designed to serve CSV data related to lifting equipment and safety. It provides an API to fetch data from CSV files based on the year specified in the request.
+🏗️ Lifting Data Server
+Welcome to the Lifting Data Server! This server application provides an API to serve CSV data related to lifting equipment and safety. It fetches data based on the specified year and delivers it in a structured format.
 
 Table of Contents
+Introduction
+Features
+Technologies Used
 Installation
 Usage
 API Endpoints
-Environment Variables
-Deployment
+Project Structure
 Contributing
 License
+Introduction
+The Lifting Data Server offers an easy and efficient way to access data about lifting equipment and safety. It serves CSV data for different years through a simple API.
+
+Features
+📋 Data Retrieval: Fetch data for a specific year from CSV files.
+📂 Structured Data: Provides data in a structured JSON format.
+🌐 Cross-Origin Resource Sharing (CORS): Enabled for easy integration with other applications.
+Technologies Used
+Backend: Node.js, Express.js
+CSV Parsing: csv-parser
 Installation
-Clone the repository:
+Follow these steps to set up the project locally:
+
+Clone the Repository:
 
 bash
 Copy code
 git clone https://github.com/sideffect263/backend-liftingData.git
 cd backend-liftingData
-Install dependencies:
+Install Dependencies:
 
 bash
 Copy code
 npm install
-Usage
-To start the server, run:
+Run the Server:
 
 bash
 Copy code
 npm start
-This will start the server on the port specified in the environment variable or default to port 5000.
-
+Usage
+🌐 The server will be running on http://localhost:5000.
+📄 Use the provided API endpoints to fetch data.
 API Endpoints
 Get Data by Year
 Fetches the CSV data for the specified year.
@@ -43,23 +56,23 @@ Content: [ { "Code": "value", "Title": "value", "Fatalities": "value", "Percent"
 Error Response:
 Code: 404
 Content: { error: "Data not found" }
-Environment Variables
-The following environment variables are used by the application:
-
-PORT: The port on which the server will run. Default is 5000.
-Deployment
-To deploy this server on Render:
-
-Create a Render Account: Sign up at Render.
-Create a New Web Service:
-Link your GitHub repository.
-Set the build and start commands:
-Build Command: npm install
-Start Command: npm start
-Set environment variables as needed (PORT will be managed by Render).
+Project Structure
+kotlin
+Copy code
+backend-liftingData/
+├── data/
+│   ├── oiics_2010.csv
+│   └── oiics_2011.csv
+├── server.js
+├── package.json
+├── package-lock.json
+└── README.md
+data/: CSV data files
+server.js: Main server file
+package.json: Project metadata and dependencies
+README.md: Project documentation
 Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
